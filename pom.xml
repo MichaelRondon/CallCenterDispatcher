@@ -21,8 +21,8 @@
     <packaging>pom</packaging>
 	
     <modules>
-        <module>CallCenterDispatcher</module>
         <module>CallCenterUtil</module>
+        <module>CallCenterDispatcher</module>
     </modules>
 
 </project>

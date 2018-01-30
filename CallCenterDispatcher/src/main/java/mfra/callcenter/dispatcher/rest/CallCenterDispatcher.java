@@ -1,6 +1,6 @@
 package mfra.callcenter.dispatcher.rest;
 
-import mfra.callcenter.util.model.Funcionario;
+import mfra.callcenter.util.model.FuncionarioDTO;
 import mfra.callcenter.util.model.Llamada;
 
 /**
@@ -9,6 +9,6 @@ import mfra.callcenter.util.model.Llamada;
  */
 public interface CallCenterDispatcher {
     
-    public void registrar(Funcionario funcionario);    
+    public void registrar(FuncionarioDTO funcionario);    
     public void despachar(Llamada llamada);    
 }

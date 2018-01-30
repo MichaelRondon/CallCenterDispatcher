@@ -3,12 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>mfra.callcenter.dispatcher</groupId>
     <artifactId>callcenterdispatcher</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.0.RELEASE</version>
+        <groupId>mfra.callcenter</groupId>
+        <artifactId>callcenter</artifactId>
+        <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <dependencies>
@@ -16,6 +17,7 @@
             <groupId>mfra.callcenter.util</groupId>
             <artifactId>callcenterutil</artifactId>
             <version>1.0</version>
+            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -31,11 +33,11 @@
             <artifactId>json-path</artifactId>
             <scope>test</scope>
         </dependency>
-	<dependency>
-		<groupId>org.projectlombok</groupId>
-		<artifactId>lombok</artifactId>
-	    <type>jar</type>
-	</dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     
     <properties>
@@ -45,6 +47,26 @@
 
     <build>
         <plugins>
+<!--            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>mfra.callcenter.util</groupId>
+                            <artifactId>callcenterutil</artifactId>
+                            <version>1.0</version>
+                            <packaging>jar</packaging>
+                            <file>../CallCenterUtil/target/callcenterutil-1.0.jar</file>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

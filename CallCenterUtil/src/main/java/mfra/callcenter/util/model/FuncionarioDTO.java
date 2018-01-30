@@ -10,7 +10,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public abstract class Funcionario implements Serializable, IFuncionario{
+public class FuncionarioDTO implements Serializable{
     
     private String numero;
     private int puerto;

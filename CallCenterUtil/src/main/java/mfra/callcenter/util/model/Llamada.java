@@ -16,17 +16,14 @@ public class Llamada extends Thread implements Serializable {
 
     private int duracion;
     private String asunto;
-    
-    @Override
-    public void run() {
-        try {
-            Thread.sleep(duracion);
-            super.run(); //To change body of generated methods, choose Tools | Templates.
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Llamada.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
 
-    
-    
+//    @Override
+//    public void run() {
+//        try {
+//            Thread.sleep(duracion);
+//            super.run(); //To change body of generated methods, choose Tools | Templates.
+//        } catch (InterruptedException ex) {
+//            Logger.getLogger(Llamada.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
 }
