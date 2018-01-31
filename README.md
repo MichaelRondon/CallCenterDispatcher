@@ -27,3 +27,11 @@ Algunas tecnologías implementadas:
 - Sincronización de hilos
 - Implementación java ExecutorService
 - Implementación java Callable
+
+
+Sugerencias de mejora:
+
+- Implementación de un Middleware de colas MOM como JMS y RabbitMQ para garantizar confiabilidad.
+- De no poder hacer lo anterior implementar la persistencia de la información en las colas así como la recuperación de esta información al arranque del servicio.
+- Implementación de componentes WEB que permitan hacer seguimiento de las llamas en forma gráfica.
+
