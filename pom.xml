@@ -23,6 +23,7 @@
     <modules>
         <module>CallCenterUtil</module>
         <module>CallCenterDispatcher</module>
+        <module>CallCenterOperador</module>
     </modules>
 
 </project>
