@@ -17,3 +17,13 @@ Método sugerido para probarlo:
 6. En una consola alterna ejecutar  el comando <code>java -jar CallCenterOperador\target\callcenteroperador-1.0.jar --rol=SUPERVISOR --nombre=pepito1 --numero=3016599934</code> en la ruta <b>CallCenterDispatcher</b>
 7. Se pueden subir tantas instancias como se deseen del <b>callcenteroperador-1.0.jar</b> con diferentes puertos. Una vez suban podrá observarse comoo se registran en el dispatcher.
 8. En una consola alterna ejecutar el comando <code>mvn test</code> en la ruta <b>CallCenterDispatcher</b> Esto hará 15 peticiones (llamadas) al dispatcher.
+
+
+Algunas tecnologías implementadas:
+
+- Servicios REST con Springboot.
+- Implementación java LinkedBlockingQueue
+- Implementación java ConcurrentLinkedQueue
+- Sincronización de hilos
+- Implementación java ExecutorService
+- Implementación java Callable
