@@ -1,1 +1,3 @@
-
+java -jar CallCenterOperador\target\callcenteroperador-1.0.jar --rol=SUPERVISOR --nombre=pepito1 --numero=3016599934
+java -jar CallCenterOperador\target\callcenteroperador-1.0.jar --rol=OPERADOR --nombre=pepito2 --numero=4016599934 --server.port=8081
+java -jar CallCenterOperador\target\callcenteroperador-1.0.jar --rol=DIRECTOR --nombre=pepito3 --numero=5016599934 --server.port=8082

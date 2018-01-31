@@ -72,16 +72,16 @@ public class DispatcherService implements CallCenterDispatcher {
                     if (procesar(OPERADORES, llamada, funcionarioService)) {
                         continue;
                     }
-                    LOGGER.warn("No se encuentran OPERADORES disponibles");
+//                    LOGGER.warn("No se encuentran OPERADORES disponibles");
                     if (procesar(SUPERVISORES, llamada, funcionarioService)) {
                         continue;
                     }
-                    LOGGER.warn("No se encuentran SUPERVISORES disponibles");
+//                    LOGGER.warn("No se encuentran SUPERVISORES disponibles");
                     if (procesar(DIRECTORES, llamada, funcionarioService)) {
                         continue;
                     }
-                    LOGGER.warn("No se encuentran DIRECTORES disponibles");
-                    LOGGER.warn("No se encuentra quien atienda la llamada, se dejará en la cola");
+//                    LOGGER.warn("No se encuentran DIRECTORES disponibles");
+//                    LOGGER.warn("No se encuentra quien atienda la llamada, se dejará en la cola");
                     LLAMADAS.offer(llamada);
 
                 } catch (InterruptedException ex) {

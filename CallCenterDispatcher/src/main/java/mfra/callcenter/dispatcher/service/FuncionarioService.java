@@ -27,12 +27,12 @@ public class FuncionarioService {
 
     public void despachar(FuncionarioDTO funcionario, Llamada llamada) {
         String uri = String.format("http://%s:%s/funcionario/despachar", funcionario.getHost(), funcionario.getPuerto());
-        LOGGER.info("Petición: {}", uri);
+//        LOGGER.info("Petición: {}", uri);
         RestTemplate restTemplate = new RestTemplate();
         HttpEntity<Llamada> request = new HttpEntity<>(llamada);
         try {
             ResponseEntity<Object> response = restTemplate.exchange(uri, HttpMethod.POST, request, Object.class);
-            if (response.getStatusCode().equals(HttpStatus.CREATED)) {
+            if (!response.getStatusCode().equals(HttpStatus.CREATED)) {
                 throw new IllegalStateException("Error en la consulta");
             }
         } catch (org.springframework.web.client.ResourceAccessException accessException) {
@@ -42,11 +42,11 @@ public class FuncionarioService {
 
     public boolean estaDisponible(FuncionarioDTO funcionario) {
         String uri = String.format("http://%s:%s/funcionario/estaDisponible", funcionario.getHost(), funcionario.getPuerto());
-        LOGGER.info("Petición: {}", uri);
+//        LOGGER.info("Petición: {}", uri);
         RestTemplate restTemplate = new RestTemplate();
         try {
             ResponseEntity<Boolean> response = restTemplate.getForEntity(uri, Boolean.class);
-            if (response.getStatusCode().equals(HttpStatus.CREATED)) {
+            if (!response.getStatusCode().equals(HttpStatus.OK)) {
                 throw new IllegalStateException("Error en la consulta");
             }
             return response.getBody();
